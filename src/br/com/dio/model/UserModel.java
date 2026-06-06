@@ -12,6 +12,14 @@ public class UserModel {
         private OffsetDateTime birthday;
 
 
+
+    public UserModel(final long id, String name, String email, OffsetDateTime birthday){
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.birthday = birthday;
+    }
+
     public UserModel() {
     }
 
