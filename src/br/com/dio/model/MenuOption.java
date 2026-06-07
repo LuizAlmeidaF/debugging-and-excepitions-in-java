@@ -11,13 +11,4 @@ public enum MenuOption {
     FIND_ALL,
     EXIT;
 
-//    MenuOption(final Consumer<UserDAO> callback){
-//        this.callback = callback;
-//    }
-//
-//    private Consumer<UserDAO> callback;
-//
-//    public Runnable getCallback() {
-//        return callback;
-//    }
 }
