@@ -3,7 +3,6 @@ package br.com.dio.model;
 import java.time.OffsetDateTime;
 import java.util.Objects;
 
-// tempo do video 6:09
 
 public class UserModel {
         private long id;
