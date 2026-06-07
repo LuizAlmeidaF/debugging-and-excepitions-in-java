@@ -44,7 +44,6 @@ public class UserDAO {
             verifyStorage();
             result = models;
         }catch (EmptyStorageException ex){
-            ex.printStackTrace();
             result = new ArrayList<>();
         }
         return models;

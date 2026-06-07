@@ -9,8 +9,18 @@ public class UserValidator {
 
     }
 
-    public static void VerifyModel(UserModel model) throws ValidatorException {
-        if(model.getName() == null || model.getName().isEmpty()) throw new ValidatorException("");
+    public static void verifyModel(UserModel model) throws ValidatorException {
+        if(stringIsBlank(model.getName()))
+            throw new ValidatorException("Informe um nome válido!");
+        if(model.getName().length() <= 2)
+            throw new ValidatorException("O nome deve ter pelo menos 3 caracteres.");
+        if(stringIsBlank(model.getEmail()))
+            throw new ValidatorException("Insira um email válido.");
+        if(!model.getEmail().contains("@") || (!model.getEmail().contains(".")))
+            throw new ValidatorException("Insira um email válido.");
+    }
 
+    private static boolean stringIsBlank(final String value){
+        return value == null || value.isBlank();
     }
 }
